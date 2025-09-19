@@ -19,43 +19,45 @@
       color: var(--text);
       line-height: 1.6;
     }
-    .split {
-      display: flex;
-      min-height: 100vh;
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
     }
-    .left {
-      flex: 1;
-      background: url("https://via.placeholder.com/800x1000") center/cover no-repeat;
-    }
-    .right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 3rem;
-    }
-    h1 {
+    header h1 {
       font-size: 2.5rem;
       margin: 0;
       color: var(--accent);
     }
-    p.lead {
+    header p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
-      opacity: 0.9;
+      opacity: 0.85;
     }
     nav {
-      margin: 2rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     nav a {
       color: var(--text);
-      margin-right: 1.5rem;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 1rem;
+      font-weight: 600;
       transition: color 0.3s;
     }
     nav a:hover {
       color: var(--accent);
+    }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.25rem;
     }
     .card {
       background: var(--card);
@@ -63,10 +65,14 @@
       border-radius: 12px;
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
     }
-    .card h2 {
-      color: var(--accent);
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
       margin-top: 0;
+      color: var(--accent);
     }
     .card a {
       color: var(--accent);
@@ -79,67 +85,61 @@
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      color: #94a3b8;
+      padding: 1.5rem;
+      background: #020617;
+      margin-top: 2rem;
       font-size: 0.9rem;
-    }
-    @media(max-width: 900px) {
-      .split {
-        flex-direction: column;
-      }
-      .left {
-        height: 300px;
-      }
-      .right {
-        padding: 2rem;
-      }
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
 
-  <div class="split">
-    <div class="left">
-      <!-- Replace the placeholder URL with your own photo or illustration -->
-    </div>
+  <header>
+    <h1>Tiffanie Schindz</h1>
+    <p>tagline</p>
+  </header>
 
-    <div class="right">
-      <h1>Tiffanie Schindz</h1>
-      <p class="lead">tagline</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="card" id="about">
-        <h2>About Me</h2>
-        <p>
-          about me paragraph
-        </p>
-      </div>
-
-      <div class="card" id="projects">
-        <h2>Featured Projects</h2>
-        <p><strong>project name</strong> brief description<br>
-          <a href="https://github.com/your-username/f35-case-study">View Project →</a></p>        
-      </div>
-
-      <div class="card" id="contact">
-        <h2>Contact</h2>
-        <p>
-          📧 <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-          💼 <a href="https://linkedin.com/in/your-linkedin">linkedin.com/in/your-linkedin</a><br>
-          💻 <a href="https://github.com/your-username">github.com/your-username</a>
-        </p>
-      </div>
-
-      <footer>
-        <p>&copy; 2025 Tiffanie Schindz</p>
-      </footer>
+  <div class="container" id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        about me paragraph
+      </p>
     </div>
   </div>
+
+  <div class="container" id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="card">
+      <h3>project name</h3>
+      <p>
+        paragraph description
+      </p>
+      <a href="https://github.com/your-username/">View Project →</a>
+    </div>    
+
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+        💼 LinkedIn: <a href="https://linkedin.com/in/your-linkedin">linkedin.com/in/your-linkedin</a><br>
+        💻 GitHub: <a href="https://github.com/your-username">github.com/your-username</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tiffanie Schindz</p>
+  </footer>
 
 </body>
 </html>
