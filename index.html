@@ -11,10 +11,12 @@
       --text: #e2e8f0;
       --accent: #38bdf8;
       --accent-hover: #0ea5e9;
+      --success: #22c55e;
+      --warning: #facc15;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -31,7 +33,7 @@
     header p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
-      opacity: 0.85;
+      opacity: 0.9;
     }
     nav {
       text-align: center;
@@ -39,9 +41,9 @@
     }
     nav a {
       color: var(--text);
+      margin: 0 1.5rem;
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
+      font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
@@ -54,10 +56,10 @@
     }
     h2 {
       color: var(--accent);
-      margin-bottom: 1rem;
       border-bottom: 2px solid var(--accent);
       display: inline-block;
       padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
     }
     .card {
       background: var(--card);
@@ -83,13 +85,42 @@
     .card a:hover {
       color: var(--accent-hover);
     }
+    .metric {
+      margin: 0.5rem 0 1rem;
+    }
+    .metric-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+    }
+    .progress-bar {
+      width: 100%;
+      background: #334155;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 1rem;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--success);
+      text-align: right;
+      padding-right: 0.5rem;
+      color: #0f172a;
+      font-weight: bold;
+      border-radius: 8px 0 0 8px;
+    }
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: #020617;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      padding: 1rem;
       color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    @media(max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
@@ -97,12 +128,13 @@
 
   <header>
     <h1>Tiffanie Schindz</h1>
-    <p>tagline</p>
+    <p>Process Improvement & Compliance Specialist | Agile Leader | Aerospace & IT Systems</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#metrics">Metrics</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -110,29 +142,88 @@
     <h2>About Me</h2>
     <div class="card">
       <p>
-        about me paragraph
+        I help organizations improve processes, maintain compliance, and deliver results. 
+        My experience includes **CMMI process improvement**, **CMMC certification**, 
+        **Scrum leadership**, and **mission planning for aerospace systems**.  
+        I focus on **impact, efficiency, and continuous improvement** across teams and projects.
       </p>
     </div>
   </div>
 
-  <div class="container" id="projects">
-    <h2>Featured Projects</h2>
+  <div class="container" id="case-studies">
+    <h2>Case Studies</h2>
 
     <div class="card">
-      <h3>project name</h3>
-      <p>
-        paragraph description
-      </p>
-      <a href="https://github.com/your-username/">View Project →</a>
-    </div>    
+      <h3>CMMI Process Improvement</h3>
+      <p>Standardized training and documentation, conducted audits, and improved enterprise compliance processes.</p>
+      <a href="https://github.com/your-username/cmmi-process-improvement">View Case Study →</a>
+    </div>
+
+    <div class="card">
+      <h3>CMMC Certification Roadmap</h3>
+      <p>Gap analysis, roadmap planning, and POA&M tracking to save costs and improve SLA KPIs.</p>
+      <a href="https://github.com/your-username/cmmc-certification">View Case Study →</a>
+    </div>
+
+    <div class="card">
+      <h3>Scrum Leadership & Agile Delivery</h3>
+      <p>Backlog management, Jira administration, and team facilitation to deliver projects on time and improve audit scores.</p>
+      <a href="https://github.com/your-username/scrum-mastering-and-agile-leadership">View Case Study →</a>
+    </div>
+  </div>
+
+  <div class="container" id="metrics">
+    <h2>Key Metrics</h2>
+    <div class="card">
+      <div class="metric">
+        <div class="metric-label">
+          <span>Internal Audit Score (CMMI)</span>
+          <span>89%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:89%">89%</div>
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-label">
+          <span>Cybersecurity SLA KPIs</span>
+          <span>94%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:94%">94%</div>
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-label">
+          <span>Audit Score Improvement (Scrum Teams)</span>
+          <span>96%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:96%">96%</div>
+        </div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-label">
+          <span>Bug Reduction (CI/CD Overhaul)</span>
+          <span>15%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:15%; background: var(--warning)">15%</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container" id="contact">
     <h2>Contact</h2>
     <div class="card">
       <p>
-        📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-        💼 LinkedIn: <a href="https://linkedin.com/in/your-linkedin">linkedin.com/in/your-linkedin</a><br>
-        💻 GitHub: <a href="https://github.com/your-username">github.com/your-username</a>
+        📧 <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+        💼 <a href="https://linkedin.com/in/your-linkedin">linkedin.com/in/your-linkedin</a><br>
+        💻 <a href="https://github.com/your-username">github.com/your-username</a>
       </p>
     </div>
   </div>
